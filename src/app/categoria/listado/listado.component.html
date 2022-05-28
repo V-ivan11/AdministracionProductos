@@ -1,0 +1,68 @@
+<div class="mb-3">
+
+    <div class="container">
+
+        <div class="card border-success mb-3">
+
+            <div class="card-header">
+
+                <h2 class="text-center">
+                    {{titulo}}
+                </h2>
+
+            </div>
+
+            <div class="card-body text-primary table-responsive">
+
+                <div class="my-2 text-left">
+
+                    <button class="btn btn-primary" type="button" routerLink="/categorias">
+                        <i class="fa-solid fa-layer-group"></i>
+                        Registrar categoria
+                    </button>
+
+                </div>
+
+                <table class="table table-striped mt-5">
+                    <thead>
+                        <tr>
+                            <th>Clave</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Actualizar</th>
+                            <th>Eliminar</th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                       <tr *ngFor="let categoria of listaCategorias">
+                           <td>{{categoria.idCategoria}}</td>
+                           <td>{{categoria.nombreCategoria}}</td>
+                           <td>{{categoria.descripcionCategoria}}</td>
+                           <td>
+                               <button type="button" name="actualizar" routerLink="['/categorias,{{categoria.idCategoria}}']" class="btn btn-success btn-sm">
+                                <i class="fa-solid fa-pen"></i>
+                                Actualizar
+                               </button>
+                           </td>
+                           <td>
+                            <button type="button" name="eliminar" routerLink="['/categorias,{{categoria.idCategoria}}']" class="btn btn-danger btn-sm">
+                                <i class="fa-solid fa-circle-minus"></i>
+                                Eliminar
+                               </button>
+                           </td>
+                       </tr>
+                       
+                    
+                   </tbody>
+
+                </table>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+</div>
