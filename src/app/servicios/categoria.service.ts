@@ -9,7 +9,7 @@ import { Categoria } from '../Modelo/categoria';
 })
 export class CategoriaService {
 
-  private urlEndPoint: string = 'http://localhost:8899//productosWeb/apiCategorias/categoria';
+  private urlEndPoint: string = 'http://localhost:8899/productosWeb/apiCategorias/categoria';
 
 
   constructor(private http: HttpClient) { }
