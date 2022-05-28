@@ -1,1 +1,51 @@
-<p>producto works!</p>
+<div class="container">
+
+    <div class="card border-info mb-3">
+
+        <div class="card-header text-primary">
+
+            <h2 class="text-center">
+                {{titulo}}
+            </h2>
+
+        </div>
+
+        <div class="card-body text-primary table-responsive">
+            <form action="">
+                <div class="mb-3">
+                    <label for="nombre">Nombre del producto</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" required [(ngModel)] = "producto.nombreProducto">
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion">Descripción del proucto</label>
+                    <input type="text" class="form-control" name="descripcion" id="descripcion" required [(ngModel)] = "producto.descripcionProducto">
+                </div>
+                <div class="mb-3">
+                    <label for="precio">Precio del Producto</label>
+                    <input type="number" class="form-control" name="precio" id="precio" required [(ngModel)] = "producto.precioProducto">
+                </div>
+                <div class="mb-3">
+                    <label for="existencia">Productos en existencia</label>
+                    <input type="number" class="form-control" name="existencia" id="existencia" required [(ngModel)] = "producto.existencia">
+                </div>
+                <div class="mb-3">
+                    <label for="fecha">Fecha (opcional): </label>
+                    <input type="date" name="fecha" id="fecha"[(ngModel)]="producto.fechaCreacion">
+                </div>
+                <div class="dropdown mb-3">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="categoria" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categoria
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a *ngFor="let categoria of listaCategorias" class="dropdown-item">{{categoria.nombreCategoria}}</a>
+                    </div>
+                  </div>
+                <div class="mb-3">
+                    <button class="btn-primary form-control" (click)="almacenarProducto()">Añadir</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

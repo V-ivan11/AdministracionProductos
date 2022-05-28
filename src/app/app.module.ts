@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductoComponent } from './producto/producto.component';
 import { ListadoComponent } from './categoria/listado/listado.component';
+import { ListadoPComponent } from './producto/listado-p/listado-p.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ListadoComponent } from './categoria/listado/listado.component';
     BienvenidoComponent,
     FooterComponent,
     ProductoComponent,
-    ListadoComponent
+    ListadoComponent,
+    ListadoPComponent
   ],
   imports: [
     BrowserModule,

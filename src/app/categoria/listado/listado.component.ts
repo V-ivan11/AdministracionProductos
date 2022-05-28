@@ -12,8 +12,6 @@ export class ListadoComponent implements OnInit {
   titulo:string = 'Listado de Categorias';
   listaCategorias:Categoria[] = [];
 
-
-
   constructor(private servicio:CategoriaService) { }
 
   ngOnInit(): void {

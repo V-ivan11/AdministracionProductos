@@ -16,9 +16,9 @@
 
                 <div class="my-2 text-left">
 
-                    <button class="btn btn-primary" type="button" routerLink="/categoria">
+                    <button class="btn btn-primary" type="button" routerLink="/producto">
                         <i class="fa-solid fa-layer-group"></i>
-                        Registrar categoria
+                        Registrar producto
                     </button>
 
                 </div>
@@ -26,33 +26,40 @@
                 <table class="table table-striped mt-5">
                     <thead>
                         <tr>
-                            <th>Clave</th>
+                            <th>ID</th>
                             <th>Nombre</th>
                             <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Existencia</th>
+                            <th>Fecha</th>
+                            <th>Categoria</th>
                             <th>Actualizar</th>
                             <th>Eliminar</th>
                         </tr>
                     </thead>
                    <tbody>
-                       <tr *ngFor="let categoria of listaCategorias">
-                           <td>{{categoria.idCategoria}}</td>
-                           <td>{{categoria.nombreCategoria}}</td>
-                           <td>{{categoria.descripcionCategoria}}</td>
+                       <tr *ngFor="let producto of listaProductos">
+                           <td>{{producto.idProducto}}</td>
+                           <td>{{producto.nombreProducto}}</td>
+                           <td>{{producto.descripcionProducto}}</td>
+                           <td>{{producto.precioProducto}}</td>
+                           <td>{{producto.existencia}}</td>
+                           <td>{{producto.fechaCreacion}}</td>
+                           <td>{{producto.idCategoria}}</td>
                            <td>
-                               <button type="button" name="actualizar" routerLink="['/categorias,{{categoria.idCategoria}}']" class="btn btn-success btn-sm">
+                               <button type="button" name="actualizar" routerLink="['/categorias,{{producto.idProducto}}']" class="btn btn-success btn-sm">
                                 <i class="fa-solid fa-pen"></i>
                                 Actualizar
                                </button>
                            </td>
                            <td>
-                            <button type="button" name="eliminar" routerLink="['/categorias,{{categoria.idCategoria}}']" class="btn btn-danger btn-sm">
+                            <button type="button" name="eliminar" routerLink="['/categorias,{{producto.idProducto}}']" class="btn btn-danger btn-sm">
                                 <i class="fa-solid fa-circle-minus"></i>
                                 Eliminar
                                </button>
                            </td>
                        </tr>
                        
-                    
                    </tbody>
 
                 </table>
