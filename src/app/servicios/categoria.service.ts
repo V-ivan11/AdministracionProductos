@@ -18,4 +18,25 @@ export class CategoriaService {
   listadoCategorias(): Observable<Categoria[]> {
     return this.http.get(this.urlEndPoint).pipe(map((response => response as Categoria[])));
   }
+
+  eliminarCategoria(id: number):Observable<Categoria>{
+    return this.http.delete<Categoria>(
+    `${this.urlEndPoint}/${id}`, {headers: this.httpHeaders}
+    );
+  }
+
+  leerCategoria(id: number):Observable<Categoria>{
+    return this.http.get<Categoria>(
+      `${this.urlEndPoint}/${id}`, {headers: this.httpHeaders}
+      );
+  }
+
+  crearCategoria(categoria: Categoria):Observable<Categoria>{
+    return this.http.post<Categoria>(this.urlEndPoint, categoria, {headers: this.httpHeaders});
+  }
+
+  actualizarCategoria(categoria: Categoria):Observable<Categoria>{
+    return this.http.put<Categoria>(
+      `${this.urlEndPoint}/${categoria.idCategoria}`, categoria, {headers: this.httpHeaders});
+  }
 }
