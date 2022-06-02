@@ -27,7 +27,7 @@ export class ListadoComponent implements OnInit {
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Se ha borrado!',
+      confirmButtonText: 'Si, estoy seguro',
       cancelButtonText: 'No, cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
