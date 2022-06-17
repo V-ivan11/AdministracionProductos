@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2';
 import { Categoria } from '../Modelo/categoria';
+import { CategoriaService } from '../servicios/categoria.service';
 
 @Component({
   selector: 'app-categoria',
@@ -9,16 +10,16 @@ import { Categoria } from '../Modelo/categoria';
 })
 export class CategoriaComponent implements OnInit {
 
-  constructor() { }
+  constructor(private servicio: CategoriaService) { }
 
-  categoria:Categoria = new Categoria;
-
+  categoria:Categoria = new Categoria();
   titulo: string = 'Categorías';
-
+  
   ngOnInit(): void {
   }
 
   almacenarCategoria() {
+    this.servicio.crearCategoria(this.categoria).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -27,7 +28,5 @@ export class CategoriaComponent implements OnInit {
       timer: 1500
     });
   }
-
-  
 
 }

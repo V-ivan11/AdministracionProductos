@@ -9,34 +9,34 @@ import { Categoria } from '../Modelo/categoria';
 })
 export class CategoriaService {
 
-  private urlEndPoint: string = 'http://localhost:8899/apiCategorias/categoria';
+  private urlEndPointCat: string = 'http://localhost:8899/apiCategorias/categoria';
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpCat: HttpClient) { }
 
   private httpHeaders = new HttpHeaders({ 'ContentType': 'application/json' });
 
   listadoCategorias(): Observable<Categoria[]> {
-    return this.http.get(this.urlEndPoint).pipe(map((response => response as Categoria[])));
+    return this.httpCat.get(this.urlEndPointCat).pipe(map((response => response as Categoria[])));
   }
 
   eliminarCategoria(id: number):Observable<Categoria>{
-    return this.http.delete<Categoria>(
-    `${this.urlEndPoint}/${id}`, {headers: this.httpHeaders}
+    return this.httpCat.delete<Categoria>(
+    `${this.urlEndPointCat}/${id}`, {headers: this.httpHeaders}
     );
   }
 
   leerCategoria(id: number):Observable<Categoria>{
-    return this.http.get<Categoria>(
-      `${this.urlEndPoint}/${id}`, {headers: this.httpHeaders}
+    return this.httpCat.get<Categoria>(
+      `${this.urlEndPointCat}/${id}`, {headers: this.httpHeaders}
       );
   }
 
   crearCategoria(categoria: Categoria):Observable<Categoria>{
-    return this.http.post<Categoria>(this.urlEndPoint, categoria, {headers: this.httpHeaders});
+    return this.httpCat.post<Categoria>(this.urlEndPointCat, categoria, {headers: this.httpHeaders});
   }
 
   actualizarCategoria(categoria: Categoria):Observable<Categoria>{
-    return this.http.put<Categoria>(
-      `${this.urlEndPoint}/${categoria.idCategoria}`, categoria, {headers: this.httpHeaders});
+    return this.httpCat.put<Categoria>(
+      `${this.urlEndPointCat}/${categoria.idCategoria}`, categoria, {headers: this.httpHeaders});
   }
 }

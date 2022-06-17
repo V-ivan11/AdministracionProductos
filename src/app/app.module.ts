@@ -12,6 +12,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductoComponent } from './producto/producto.component';
 import { ListadoComponent } from './categoria/listado/listado.component';
 import { ListadoPComponent } from './producto/listado-p/listado-p.component';
+import { ActCatComponent } from './categoria/act-cat/act-cat.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -22,14 +32,16 @@ import { ListadoPComponent } from './producto/listado-p/listado-p.component';
     FooterComponent,
     ProductoComponent,
     ListadoComponent,
-    ListadoPComponent
+    ListadoPComponent,
+    ActCatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

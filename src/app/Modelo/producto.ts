@@ -1,3 +1,5 @@
+import { Categoria } from "./categoria";
+
 export class Producto{
     idProducto: number = 0;
     nombreProducto: string = '';
@@ -5,5 +7,5 @@ export class Producto{
     precioProducto: number = 0;
     existencia: number = 0;
     fechaCreacion: Date = new Date();
-    idCategoria: number = 0;
+    idCategoria: Categoria = new Categoria();
 }

@@ -45,7 +45,7 @@
                            <td>{{producto.precioProducto}}</td>
                            <td>{{producto.existencia}}</td>
                            <td>{{producto.fechaCreacion}}</td>
-                           <td>{{producto.idCategoria}}</td>
+                           <td>{{producto.idCategoria.nombreCategoria}}</td>
                            <td>
                                <button type="button" name="actualizar" routerLink="['/categorias,{{producto.idProducto}}']" class="btn btn-success btn-sm">
                                 <i class="fa-solid fa-pen"></i>
@@ -53,7 +53,7 @@
                                </button>
                            </td>
                            <td>
-                            <button type="button" name="eliminar" routerLink="['/categorias,{{producto.idProducto}}']" class="btn btn-danger btn-sm">
+                            <button type="button" name="eliminar" (click)="eliminar(producto)" class="btn btn-danger btn-sm">
                                 <i class="fa-solid fa-circle-minus"></i>
                                 Eliminar
                                </button>

@@ -15,7 +15,17 @@ export class ProductoService {
 
   private httpHeaders = new HttpHeaders({ 'ContentType': 'application/json' });
 
-  listadoCategorias(): Observable<Producto[]> {
+  listadoProducto(): Observable<Producto[]> {
     return this.http.get(this.urlEndPoint).pipe(map((response => response as Producto[])));
+  }
+
+  eliminarProducto(id: number):Observable<Producto>{
+    return this.http.delete<Producto>(
+    `${this.urlEndPoint}/${id}`, {headers: this.httpHeaders}
+    );
+  }
+
+  crearProducto(producto: Producto):Observable<Producto>{
+    return this.http.post<Producto>(this.urlEndPoint, producto, {headers: this.httpHeaders});
   }
 }

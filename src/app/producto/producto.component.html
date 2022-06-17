@@ -32,14 +32,13 @@
                     <label for="fecha">Fecha (opcional): </label>
                     <input type="date" name="fecha" id="fecha"[(ngModel)]="producto.fechaCreacion">
                 </div>
-                <div class="dropdown mb-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="categoria" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Categoria
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a *ngFor="let categoria of listaCategorias" class="dropdown-item">{{categoria.nombreCategoria}}</a>
-                    </div>
-                  </div>
+                <div class="mb-3">
+                    <select name="categoriaSelect" id="categoriaSelect" [(ngModel)]="idCatSel">
+                        <option value="0">Categoría</option>
+                        <option *ngFor="let categoria of listaCategorias" value="{{categoria.idCategoria}}">{{categoria.nombreCategoria}}</option>
+                      </select>
+                </div>
+                
                 <div class="mb-3">
                     <button class="btn-primary form-control" (click)="almacenarProducto()">Añadir</button>
                 </div>
