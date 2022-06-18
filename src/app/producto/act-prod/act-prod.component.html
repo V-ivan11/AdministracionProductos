@@ -29,9 +29,9 @@
                     <input type="number" class="form-control" name="existencia" value="{{producto.existencia}}" id="existencia" required [(ngModel)] = "producto.existencia">
                 </div>
                 <div class="mb-3">
-                    <select name="categoriaSelect" id="categoriaSelect" [(ngModel)]="idCatSel">
+                    <select name="categoriaSelect" id="categoriaSelect" [value]="producto.idCategoria.idCategoria" [(ngModel)]="idCatSel">
                         <option value="0">Categoría</option>
-                        <option [value]="producto.idCategoria.idCategoria" *ngFor="let categoria of listaCategorias" value="{{categoria.idCategoria}}">{{categoria.nombreCategoria}}</option>
+                        <option *ngFor="let categoria of listaCategorias" value="{{categoria.idCategoria}}">{{categoria.nombreCategoria}}</option>
                       </select>
                 </div>
                 

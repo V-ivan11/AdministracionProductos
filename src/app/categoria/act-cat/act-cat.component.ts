@@ -13,7 +13,6 @@ export class ActCatComponent implements OnInit {
 
   titulo:String = "Actualizar Categoría"
   categoria:Categoria = new Categoria();
-  newCategoria:Categoria = new Categoria();
   idCat:any = 0;
 
   constructor(
@@ -24,13 +23,12 @@ export class ActCatComponent implements OnInit {
 
   ngOnInit(): void {
     this.idCat = this.activatedRoute.snapshot.paramMap.get('id');
-    this.newCategoria.idCategoria = this.idCat;
+    this.categoria.idCategoria = this.idCat;
     this.servicio.leerCategoria(this.idCat).subscribe((categoria) => this.categoria = categoria);
-    this.newCategoria = this.categoria;
   }
 
   actualizarCategoria(){
-    this.servicio.actualizarCategoria(this.newCategoria).subscribe(data => console.log(data), error => console.log(error));
+    this.servicio.actualizarCategoria(this.categoria).subscribe(data => console.log(data), error => console.log(error));
   }
 
 }
