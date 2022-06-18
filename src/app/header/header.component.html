@@ -1,46 +1,21 @@
-<div class="container mb-3 colorAzulEscom">
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" routerLink="/home">
-        <img src="src\assets\91989-supported-business-man.gif" alt="" srcset="">
-        <i class="fa-solid fa-drumstick-bite"></i>
-        Administracion de Productos
+<header class="p-3 header text-white">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <i class="fa-solid fa-shop"></i>
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
 
-            <a class="nav-link active" aria-current="page" routerLink="/home" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#009ee3">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-              </svg>Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/listadoCategorias" href="#">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#009ee3">
-                <path d="M0 0h24v24H0z" fill="none" />
-                <path d="M12 2l-5.5 9h11z" />
-                <circle cx="17.5" cy="17.5" r="4.5" />
-                <path d="M3 13.5h8v8H3z" />
-              </svg>
-              Categorias</a>
-          </li>
-          <li class="nav-item">
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#" routerLink="/home" class="nav-link px-2 text-white font-weight-bold">Administracion Productos</a></li>
+        <li><a href="#" routerLink="/listadoProductos" class="nav-link px-2 text-white">Ver Productos</a></li>
+        <li><a href="#" routerLink="/listadoCategorias" class="nav-link px-2 text-white">Ver Categorías</a></li>
 
-            <a class="nav-link" routerLink="/listadoProductos" href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                viewBox="0 0 24 24" width="24px" fill="#009ee3">
-                <path d="M0 0h24v24H0V0z" fill="none" />
-                <path
-                  d="M20 2H4c-1 0-2 .9-2 2v3.01c0 .72.43 1.34 1 1.69V20c0 1.1 1.1 2 2 2h14c.9 0 2-.9 2-2V8.7c.57-.35 1-.97 1-1.69V4c0-1.1-1-2-2-2zm-5 12H9v-2h6v2zm5-7H4V4l16-.02V7z" />
-              </svg>Productos</a>
-          </li>
-        </ul>
+      </ul>
+
+      <div class="text-end">
+        <button type="button" routerLink="/producto" class="btn btn-outline-light me-2">Categoria</button>
+        <button type="button" routerLink="/categoria" class="btn btn-warning">Producto</button>
       </div>
     </div>
-  </nav>
-</div>
+  </div>
+</header>

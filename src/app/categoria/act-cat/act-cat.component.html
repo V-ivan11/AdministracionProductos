@@ -14,12 +14,12 @@
             <form action="">
                 <div class="mb-3">
                     <label for="nombre">Nombre de la categoría</label>
-                    <input type="text" class="form-control" value="{{categoria.nombreCategoria}}" name="nombre" id="nombre" required [(ngModel)] = "newCategoria.nombreCategoria">
+                    <input type="text" class="form-control" value="{{categoria.nombreCategoria}}" name="nombre" id="nombre" required [(ngModel)] = "categoria.nombreCategoria">
                 </div>
 
                 <div class="mb-3">
                     <label for="descripcion">Descripción:</label>
-                    <input type="text" class="form-control" value="{{categoria.descripcionCategoria}}" name="descripcion" id="descripcion" required [(ngModel)] = "newCategoria.descripcionCategoria">
+                    <input type="text" class="form-control" value="{{categoria.descripcionCategoria}}" name="descripcion" id="descripcion" required [(ngModel)] = "categoria.descripcionCategoria">
                 </div>
                 <div class="mb-3">
                     <button class="btn-primary form-control" (click)="actualizarCategoria()">Actualizar</button>

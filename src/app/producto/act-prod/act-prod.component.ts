@@ -28,7 +28,6 @@ export class ActProdComponent implements OnInit {
     this.servicioCat.listadoCategorias().subscribe((categorias)=>this.listaCategorias=categorias);
     // Obtiene el ID que se pasó por la URL
     this.idProducto = this.activatedRoute.snapshot.paramMap.get('id');
-    console.log(this.idProducto);
     // Lee los datos del producto seleccionado
     this.servicioProd.leerProducto(this.idProducto).subscribe((producto) => this.producto = producto);
   }
@@ -36,8 +35,9 @@ export class ActProdComponent implements OnInit {
   actualizarProducto(){
 
     for (let i = 0; i < this.listaCategorias.length; i++) {
-      if (this.listaCategorias[i].idCategoria = this.idCatSel) {
+      if (this.listaCategorias[i].idCategoria == this.idCatSel) {
         this.producto.idCategoria = this.listaCategorias[i];
+        console.log(this.producto.idCategoria);
         break;
       }
     }
@@ -46,7 +46,7 @@ export class ActProdComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Se almacenó la categoría',
+      title: 'Se actualizó el producto',
       showConfirmButton: false,
       timer: 1500
     });
