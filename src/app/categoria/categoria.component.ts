@@ -13,7 +13,7 @@ export class CategoriaComponent implements OnInit {
   constructor(private servicio: CategoriaService) { }
 
   categoria:Categoria = new Categoria();
-  titulo: string = 'Categorías';
+  titulo: string = 'Registrar una Categoría';
   
   ngOnInit(): void {
   }
@@ -23,7 +23,7 @@ export class CategoriaComponent implements OnInit {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
-      title: 'Se almacenó la categoría',
+      title: 'Se almacenó el producto',
       showConfirmButton: false,
       timer: 1500
     });

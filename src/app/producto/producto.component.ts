@@ -17,7 +17,7 @@ export class ProductoComponent implements OnInit {
   listaCategorias:Categoria[] = [];
   idCatSel:number = 0;
   catElegida:Categoria = new Categoria();
-  titulo: string = 'Producto';
+  titulo: string = 'Registrar un producto nuevo';
 
   constructor(private servicioCat:CategoriaService, private servicioProd:ProductoService) { }
 
