@@ -39,7 +39,7 @@
                            <td>{{categoria.nombreCategoria}}</td>
                            <td>{{categoria.descripcionCategoria}}</td>
                            <td>
-                               <button type="button" name="actualizar" routerLink="['/categorias,{{categoria.idCategoria}}']" class="btn btn-success btn-sm">
+                               <button type="button" name="actualizar" [routerLink]="['/categoria',categoria.idCategoria]" class="btn btn-success btn-sm">
                                 <i class="fa-solid fa-pen"></i>
                                 Actualizar
                                </button>

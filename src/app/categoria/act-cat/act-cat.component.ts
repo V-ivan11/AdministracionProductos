@@ -23,12 +23,13 @@ export class ActCatComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.activatedRoute.data.subscribe(data => {this.idCat = data});
+    this.idCat = this.activatedRoute.snapshot.paramMap.get('id');
+    this.newCategoria.idCategoria = this.idCat;
     this.servicio.leerCategoria(this.idCat).subscribe((categoria) => this.categoria = categoria);
   }
 
   actualizarCategoria(){
-
+    this.servicio.actualizarCategoria(this.newCategoria).subscribe(data => console.log(data), error => console.log(error))
   }
 
 }

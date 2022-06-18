@@ -14,6 +14,7 @@ import { ListadoComponent } from './categoria/listado/listado.component';
 import { ListadoPComponent } from './producto/listado-p/listado-p.component';
 import { ActCatComponent } from './categoria/act-cat/act-cat.component';
 import { RouterModule, Routes } from '@angular/router';
+import { ActProdComponent } from './producto/act-prod/act-prod.component';
 
 const routes: Routes = [
   {
@@ -33,7 +34,8 @@ const routes: Routes = [
     ProductoComponent,
     ListadoComponent,
     ListadoPComponent,
-    ActCatComponent
+    ActCatComponent,
+    ActProdComponent
   ],
   imports: [
     BrowserModule,
