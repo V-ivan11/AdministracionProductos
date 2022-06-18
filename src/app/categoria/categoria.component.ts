@@ -22,7 +22,7 @@ export class CategoriaComponent implements OnInit {
     this.servicio.crearCategoria(this.categoria).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
       icon: 'success',
-      title: 'Se almacenó el producto',
+      title: 'Se almacenó la categoría.',
       showConfirmButton: false,
       timer: 1500
     });

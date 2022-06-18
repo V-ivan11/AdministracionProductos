@@ -36,7 +36,7 @@ export class ProductoComponent implements OnInit {
     this.servicioProd.crearProducto(this.producto).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
       icon: 'success',
-      title: 'Se almacenó la categoría',
+      title: 'Se almacenó el producto.',
       showConfirmButton: false,
       timer: 1500
     });
