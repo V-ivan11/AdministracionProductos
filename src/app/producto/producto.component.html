@@ -29,10 +29,6 @@
                     <input type="number" class="form-control" name="existencia" id="existencia" required [(ngModel)] = "producto.existencia">
                 </div>
                 <div class="mb-3">
-                    <label for="fecha">Fecha (opcional): </label>
-                    <input type="date" name="fecha" id="fecha"[(ngModel)]="producto.fechaCreacion">
-                </div>
-                <div class="mb-3">
                     <select name="categoriaSelect" id="categoriaSelect" [(ngModel)]="idCatSel">
                         <option value="0">Categoría</option>
                         <option *ngFor="let categoria of listaCategorias" value="{{categoria.idCategoria}}">{{categoria.nombreCategoria}}</option>
