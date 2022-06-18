@@ -9,7 +9,7 @@ import { Categoria } from '../Modelo/categoria';
 })
 export class CategoriaService {
 
-  private urlEndPointCat: string = 'http://localhost:8899/apiCategorias/categoria';
+  private urlEndPointCat: string = 'https://newapicategorias.herokuapp.com/apiCategorias/categoria';
 
   constructor(private httpCat: HttpClient) { }
 

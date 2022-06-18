@@ -10,7 +10,7 @@ import { Categoria } from '../Modelo/categoria';
 })
 export class ProductoService {
 
-  private urlEndPoint: string = 'http://localhost:8899/apiProductos/producto';
+  private urlEndPoint: string = 'https://newapicategorias.herokuapp.com/apiProductos/producto';
 
   constructor(private http: HttpClient) { }
 
