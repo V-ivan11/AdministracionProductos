@@ -21,7 +21,6 @@ export class CategoriaComponent implements OnInit {
   almacenarCategoria() {
     this.servicio.crearCategoria(this.categoria).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
-      position: 'top-end',
       icon: 'success',
       title: 'Se almacenó el producto',
       showConfirmButton: false,

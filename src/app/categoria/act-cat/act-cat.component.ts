@@ -31,7 +31,6 @@ export class ActCatComponent implements OnInit {
   actualizarCategoria(){
     this.servicio.actualizarCategoria(this.categoria).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
-      position: 'top-end',
       icon: 'success',
       title: 'Se actualizó la categoría',
       showConfirmButton: false,

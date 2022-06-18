@@ -35,7 +35,6 @@ export class ProductoComponent implements OnInit {
     this.producto.idCategoria = this.catElegida;
     this.servicioProd.crearProducto(this.producto).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
-      position: 'top-end',
       icon: 'success',
       title: 'Se almacenó la categoría',
       showConfirmButton: false,

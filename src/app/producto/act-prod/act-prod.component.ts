@@ -44,7 +44,6 @@ export class ActProdComponent implements OnInit {
 
     this.servicioProd.actualizarProducto(this.producto).subscribe(data => console.log(data), error => console.log(error));
     Swal.fire({
-      position: 'top-end',
       icon: 'success',
       title: 'Se actualizó el producto',
       showConfirmButton: false,
