@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Categoria } from 'src/app/Modelo/categoria';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriaService } from 'src/app/servicios/categoria.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-act-cat',
@@ -29,6 +30,13 @@ export class ActCatComponent implements OnInit {
 
   actualizarCategoria(){
     this.servicio.actualizarCategoria(this.categoria).subscribe(data => console.log(data), error => console.log(error));
+    Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Se actualizó la categoría',
+      showConfirmButton: false,
+      timer: 1500
+    });
   }
 
 }
