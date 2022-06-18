@@ -1,1 +1,46 @@
-<p>act-prod works!</p>
+<div class="container">
+
+    <div class="card border-info mb-3">
+
+        <div class="card-header text-primary">
+
+            <h2 class="text-center">
+                {{titulo}}
+            </h2>
+
+        </div>
+
+        <div class="card-body text-primary table-responsive">
+            <form action="">
+                <div class="mb-3">
+                    <label for="nombre">Nombre del producto</label>
+                    <input type="text" class="form-control" name="nombre" value="{{producto.nombreProducto}}" id="nombre" required [(ngModel)] = "producto.nombreProducto">
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion">Descripción del proucto</label>
+                    <input type="text" class="form-control" name="descripcion" value="{{producto.descripcionProducto}}" id="descripcion" required [(ngModel)] = "producto.descripcionProducto">
+                </div>
+                <div class="mb-3">
+                    <label for="precio">Precio del Producto</label>
+                    <input type="number" class="form-control" name="precio" value="{{producto.precioProducto}}" id="precio" required [(ngModel)] = "producto.precioProducto">
+                </div>
+                <div class="mb-3">
+                    <label for="existencia">Productos en existencia</label>
+                    <input type="number" class="form-control" name="existencia" value="{{producto.existencia}}" id="existencia" required [(ngModel)] = "producto.existencia">
+                </div>
+                <div class="mb-3">
+                    <select name="categoriaSelect" id="categoriaSelect" [(ngModel)]="idCatSel">
+                        <option value="0">Categoría</option>
+                        <option [value]="producto.idCategoria.idCategoria" *ngFor="let categoria of listaCategorias" value="{{categoria.idCategoria}}">{{categoria.nombreCategoria}}</option>
+                      </select>
+                </div>
+                
+                <div class="mb-3">
+                    <button class="btn-primary form-control" (click)="actualizarProducto()">Actualizar Producto</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+</div>

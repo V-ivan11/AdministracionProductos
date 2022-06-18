@@ -26,10 +26,11 @@ export class ActCatComponent implements OnInit {
     this.idCat = this.activatedRoute.snapshot.paramMap.get('id');
     this.newCategoria.idCategoria = this.idCat;
     this.servicio.leerCategoria(this.idCat).subscribe((categoria) => this.categoria = categoria);
+    this.newCategoria = this.categoria;
   }
 
   actualizarCategoria(){
-    this.servicio.actualizarCategoria(this.newCategoria).subscribe(data => console.log(data), error => console.log(error))
+    this.servicio.actualizarCategoria(this.newCategoria).subscribe(data => console.log(data), error => console.log(error));
   }
 
 }
